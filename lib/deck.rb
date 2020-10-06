@@ -2,8 +2,14 @@ require_relative './card'
 
 class Deck
   def initialize
-    spades = Card.build(:spades)
-    @cards = spades.shuffle
+    cards = [
+      Card.build(:spades),
+      Card.build(:hearts),
+      Card.build(:diamonds),
+      Card.build(:clubs)
+    ].flatten
+
+    @cards = cards.shuffle
   end
 
   def draw
