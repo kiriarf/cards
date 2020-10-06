@@ -20,4 +20,8 @@ class Card
       return @value
     end
   end
+
+  def self.build(suit)
+    (1..13).map { |value| new(value, :spades) }
+  end
 end
