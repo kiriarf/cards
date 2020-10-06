@@ -1,5 +1,5 @@
-require './lib/card'
+require './lib/deck'
 
-card = Card.new(2, :spades)
+card = Deck.new.draw
 
 puts "You got the #{card.value} of #{card.suit}"
